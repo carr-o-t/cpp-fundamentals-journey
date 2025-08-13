@@ -14,9 +14,7 @@ std::pair<int, float> division(int a, int b) {
     return std::pair<int, float>(intQuotient, floatQuotient);
 }
 
-int main(){
-    std::cout << "Hello, World!" << std::endl;
-
+int callDivision(){
     int a, b;
     std::cout << "Enter two integers (a b): ";
     std::cin >> a >> b;
@@ -27,6 +25,27 @@ int main(){
     } catch (const std::invalid_argument& e) {
         std::cerr << "Error: " << e.what() << std::endl;
     }
+
+    return 0;
+}
+
+int incrementAndDecrement() {
+    int a = 5;
+
+    std::cout << "Prefix increment: " << ++a << std::endl; // increments first → prints 6
+
+    std::cout << "Postfix increment: " << a++ << std::endl; // prints 6, THEN a becomes 7
+
+    std::cout << "Prefix decrement: " << --a << std::endl; // decrements first → prints 6
+
+    std::cout << "Postfix decrement: " << a-- << std::endl; // prints 6, THEN a becomes 5
+}
+
+int main(){
+    std::cout << "Hello, World!" << std::endl;
+
+    
+    incrementAndDecrement();
 
     std::cout << "End of program." << std::endl;
     return 0;
